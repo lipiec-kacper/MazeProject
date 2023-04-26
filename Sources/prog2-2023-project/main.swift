@@ -1,2 +1,5 @@
 import Foundation
-print("Hello, World!")
+
+//MORPION
+let play = Morpion()
+play.playMorpion()

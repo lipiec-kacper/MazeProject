@@ -7,9 +7,9 @@
                 "swift"
             ],
             "name": "Debug prog2-2023-project",
-            "program": "${workspaceFolder:prog2-2023-project-template}/.build/debug/prog2-2023-project",
+            "program": "${workspaceFolder:prog2-2023-project-team05-p2-2023}/.build/debug/prog2-2023-project",
             "args": [],
-            "cwd": "${workspaceFolder:prog2-2023-project-template}",
+            "cwd": "${workspaceFolder:prog2-2023-project-team05-p2-2023}",
             "preLaunchTask": "swift: Build Debug prog2-2023-project"
         },
         {
@@ -19,9 +19,9 @@
                 "swift"
             ],
             "name": "Release prog2-2023-project",
-            "program": "${workspaceFolder:prog2-2023-project-template}/.build/release/prog2-2023-project",
+            "program": "${workspaceFolder:prog2-2023-project-team05-p2-2023}/.build/release/prog2-2023-project",
             "args": [],
-            "cwd": "${workspaceFolder:prog2-2023-project-template}",
+            "cwd": "${workspaceFolder:prog2-2023-project-team05-p2-2023}",
             "preLaunchTask": "swift: Build Release prog2-2023-project"
         }
     ]
