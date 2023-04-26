@@ -1,5 +1,5 @@
 import Foundation
 
 //TIC TAC TOE
-let play = Morpion()
-play.playMorpion()
+let play = Tictactoe()
+play.playTicTacToe()

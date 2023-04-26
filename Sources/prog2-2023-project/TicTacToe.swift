@@ -1,11 +1,11 @@
 //
-//  Morpion.swift
+//  TicTacToe.swift
 //  Pixel Quest
 //
 //  Created by Michel Sem on 25/04/2023.
 //
 
-class Morpion {
+class Tictactoe {
     var grid = [["-", "-", "-"], ["-", "-", "-"], ["-", "-", "-"]]
 
     func printGrid() {
@@ -46,7 +46,7 @@ class Morpion {
     let player1 = "X"
     let player2 = "O"
 
-    func playMorpion() {
+    func playTicTacToe() {
         var currentPlayer = Nameplayer1
         var SymcurrentPlayer = player1
         
