@@ -22,15 +22,15 @@
 
 > Game name "Pixel Quest : The Backrooms Escape". 
 
-In our game, the Backrooms exist as a parallel dimension that can be accessed through the arcade game that the main character, a student living in the 80s, encounters. The Backrooms are a sprawling, monotonous network of yellow, carpeted rooms that extend infinitely in all directions, devoid of any distinguishing features or landmarks. 
+> In our game, the Backrooms exist as a parallel dimension that can be accessed through the arcade game that the main character, a student living in the 80s, encounters. The Backrooms are a sprawling, monotonous network of yellow, carpeted rooms that extend infinitely in all directions, devoid of any distinguishing features or landmarks. 
 
-As soon as the main character falls into the Backrooms, they are immediately assailed by a sense of overwhelming dread and isolation. The only thing that breaks the monotony of the Backrooms is the presence of the dangerous entities that inhabit it: the Malfunctioning Entity Groups (M.E.G.s). 
+> As soon as the main character falls into the Backrooms, they are immediately assailed by a sense of overwhelming dread and isolation. The only thing that breaks the monotony of the Backrooms is the presence of the dangerous entities that inhabit it: the Malfunctioning Entity Groups (M.E.G.s). 
 
-The M.E.G.s are grotesque, twisted beings that have been warped by their prolonged exposure to the strange, extradimensional energies of the Backrooms. They are fiercely territorial and will attack anyone who enters their domain. The main character must navigate through the labyrinthine corridors of the Backrooms while avoiding these deadly entities, using their wits and whatever limited resources they can find to survive.
+> The M.E.G.s are grotesque, twisted beings that have been warped by their prolonged exposure to the strange, extradimensional energies of the Backrooms. They are fiercely territorial and will attack anyone who enters their domain. The main character must navigate through the labyrinthine corridors of the Backrooms while avoiding these deadly entities, using their wits and whatever limited resources they can find to survive.
 
-As the main character progresses through the Backrooms, they begin to uncover the truth about the dimension and the forces that brought them there. They discover that the Backrooms are not just a random occurrence, but a deliberate creation by a mysterious and malevolent entity known as the Arcade Master. 
+> As the main character progresses through the Backrooms, they begin to uncover the truth about the dimension and the forces that brought them there. They discover that the Backrooms are not just a random occurrence, but a deliberate creation by a mysterious and malevolent entity known as the Arcade Master. 
 
-The Arcade Master is a powerful being that has been manipulating reality for its own amusement, creating the Backrooms and other alternate dimensions as part of an elaborate game. The main character must confront the Arcade Master and defeat it if they ever hope to escape the Backrooms and return to their own reality.
+> The Arcade Master is a powerful being that has been manipulating reality for its own amusement, creating the Backrooms and other alternate dimensions as part of an elaborate game. The main character must confront the Arcade Master and defeat it if they ever hope to escape the Backrooms and return to their own reality.
 
 **Characters**
 
