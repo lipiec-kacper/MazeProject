@@ -1,5 +1,5 @@
 import Foundation
 
-//MORPION
+//TIC TAC TOE
 let play = Morpion()
 play.playMorpion()
