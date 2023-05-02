@@ -54,11 +54,12 @@ class Maze {
 "+-------------------------------------------------------------------------------+",
 ]
 
-func find(){
+    func find(character: String){
+        
     for (rowIndex, row) in mazeArray.enumerated() {
         for (colIndex, col) in row.enumerated() {
-            if col == "#" {
-                print("Coordonnées de '@': (\(rowIndex), \(colIndex))")               //find a special character in the array
+            if String(col) == character {
+                print("Coordonnées de \(character): (\(colIndex), \(rowIndex))")               //find a special character in the array
             }
         }
     }
@@ -70,25 +71,6 @@ func showMaze(){
     }
     
 }
-    
-    
-//var x: Int {
-//        get {
-//            return _x
-//        }
-//        set(newValue) {
-//            _x = newValue
-//        }
-//    }
-//
-//    var y: Int {
-//        get {
-//            return _y
-//        }
-//        set(newValue) {
-//            _y = newValue
-//        }
-//    }
     
     func playerPosition() -> (Int, Int){
         for (rowIndex, row) in mazeArray.enumerated() {
