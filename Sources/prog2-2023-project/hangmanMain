@@ -1,0 +1,10 @@
+//
+//  main.swift
+//  Project
+//
+//  Created by Elyot Hamon on 26/04/2023.
+//
+
+import Foundation
+
+playHangman()
