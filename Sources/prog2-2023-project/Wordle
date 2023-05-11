@@ -1,1 +1,80 @@
+//
+//  Wordle.swift
+//  wordle
+//
+//  Created by Elyot Hamon on 09/05/2023.
+//
 
+import Foundation
+
+class Wordle {
+    
+    // on definit les regles du jeu
+    let maxAttempts = 6
+    let wordLength = 5
+    
+    let words = ["guard", "alarm", "floor", "stair", "alert", "haunt"]
+    
+    var targetWord = ""
+    var secretWord = ""
+    
+    //debut du jeu
+    var attempts = 0
+    var guessedLetters = Set<Character>()
+    
+    
+    init(){
+        targetWord = words.randomElement()!
+        secretWord = String(repeating: "*", count: wordLength)
+        print("The word to Guess: \(secretWord)")
+        
+    }
+    
+    func playGame() {
+        //une loop jusqu'a la fin du jeu peu importe si le joueur gagne ou perd
+        while attempts < maxAttempts {
+            print("Enter a letter: ")
+            guard let guess = readLine()?.trimmingCharacters(in: .whitespacesAndNewlines).first?.lowercased()
+            else {
+                print("Invalid input, please enter a letter.")
+                continue
+            }
+            
+            if guessedLetters.contains(Character(guess)){
+                print("Letter already guessed")
+                continue
+            }
+            guessedLetters.insert(Character(guess))
+            
+            var newSecretWord = ""
+            var correctGuess = false
+            
+            for (index, letter) in targetWord.enumerated() {
+                if String(letter) == guess {
+                    newSecretWord += String(guess)
+                    correctGuess = true
+                } else {
+                    let stringIndex = secretWord.index(secretWord.startIndex, offsetBy: index)
+                    newSecretWord += String(secretWord[stringIndex])
+                }
+            }
+            
+            if !correctGuess {
+                attempts += 1
+                print("Incorect, you have \(maxAttempts - attempts) attempts left")
+            } else {
+                secretWord = newSecretWord
+                print("correct !")
+            }
+            
+            print("guess the word: \(secretWord)")
+            
+            if secretWord == targetWord {
+                print("You Win !")
+                return
+            }
+        }
+        
+        print("You lost, the word was \(targetWord)")
+    }
+}
