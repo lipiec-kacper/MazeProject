@@ -4,6 +4,7 @@ class Inventory{
     //Size of inventory
     var inventory = [[],[]]
     let weapon = Weapons()
+    let heals = Heal()
     
     func getInventory(){
         for line in inventory{
@@ -17,7 +18,7 @@ class Inventory{
     }
     
     
-    func getHeal(){
+    func getHeals(){
         print(inventory[1])
     }
     
@@ -27,8 +28,8 @@ class Inventory{
     }
     
     
-    func addHeal(name : String){
-        inventory[1].append(name)
+    func addHeal(heal : HealAvalaible){
+        inventory[1].append(heals.healName(healType: heal))
     }
     
 

@@ -1,0 +1,126 @@
+import Foundation
+
+
+class Fight {
+    
+    enum CharacterType {
+        case scientist
+        case guardian
+    }
+    
+    struct Character {
+        var name: String
+        var health : Int
+        var attack : Int
+    }
+    //Création de deux variables qui vont définir le joueur et le bot (Entity1)
+    var Nameplayer2 = Character(name: "boss", health: 100, attack: 100)
+    var Nameplayer1 = Character(name: "", health: 0, attack: 0)
+    
+    //Fonction principale
+    func start() {
+        print("Select your character:")
+        print("[s] Scientist")
+        print("[g] Guardian")
+        
+        if let choice = readLine()?.lowercased() {
+            switch choice {
+            case "s":
+                Nameplayer1 = Character(name: "scientist", health: 80, attack: 70)
+            case "g":
+                Nameplayer1 = Character(name: "guardian", health: 100, attack: 40)
+            default:
+                break
+            }
+        }
+        //Définition de l'ordre de jeu (player1 c'est le joueur, player2 c'est le bot)
+        var currentPlayer = Nameplayer1
+        var nextPlayer = Nameplayer2
+        
+        //Boucle principale
+        
+        
+        
+        
+        
+        
+        while true {
+            //Vérificaton du niveau de la vie du joueur et du bot, ainsi on définie la fin du jeu (jsp si ça marche)
+            if Nameplayer1.health <= 0 {
+                print("\(Nameplayer1) is dead, \(Nameplayer2) won !")
+                break
+            }
+            
+            if Nameplayer2.health <= 0 {
+                print("\(Nameplayer2) is dead, \(Nameplayer1) won !")
+                break
+            }
+            //Selection d'actions pour le joueur
+            print("It's \(currentPlayer.name)'s turn ! Choose to attack [a], or heal yourself [h] : ")
+            if let input = readLine()?.lowercased() {
+                if input == "a" {
+                    var damage = max(0, currentPlayer.attack - nextPlayer.health)
+                    if Bool.random() {
+                        damage *= 5
+                        print("CRITICAL HIT" + "\n")
+                    }
+                    switch input {
+                    case "a":
+                        print("\(currentPlayer.name) attacks \(nextPlayer.name) !")
+                        let damageDone = Int.random(in: 10...40)
+                        nextPlayer.health -= damageDone
+                        print("\(currentPlayer.name) deals \(damageDone) to \(nextPlayer.name)" + "\n")
+                        print("\(currentPlayer.name) health : \(currentPlayer.health)")
+                        print("\(nextPlayer.name) health : \(nextPlayer.health)" + "\n")
+                    case "h":
+                        print("\(currentPlayer.name) heals themselves")
+                        let healing = Int.random(in: 10...30)
+                        currentPlayer.health += healing
+                        print("\(currentPlayer.name) gained \(healing) health points" + "\n")
+                        print("\(currentPlayer.name) health : \(currentPlayer.health)")
+                        print("\(nextPlayer.name) health : \(nextPlayer.health)" + "\n")
+                    default:
+                        break
+                    }
+                }
+                //Changement de tour (au tour du bot ducoup vu qu'on a commencé par le joueur)
+                if currentPlayer.name != nextPlayer.name {
+                    currentPlayer = Nameplayer2
+                    nextPlayer = Nameplayer1
+                }
+                //fonction du bot
+                botplay()
+                func botplay() {
+                    if currentPlayer.name == Nameplayer2.name {
+                        print("It's \(currentPlayer.name)'s turn !" + "\n")
+                        let botchoice = Int.random(in: 0...1)
+                        switch botchoice {
+                        case 0:
+                            print("\(currentPlayer.name) attacks \(nextPlayer.name) !")
+                            let damageDone = Int.random(in: 10...40)
+                            nextPlayer.health -= damageDone
+                            print("\(currentPlayer.name) deals \(damageDone) to \(nextPlayer.name)" + "\n")
+                            print("\(currentPlayer.name) health : \(currentPlayer.health)")
+                            print("\(nextPlayer.name) health : \(nextPlayer.health)" + "\n")
+                        case 1:
+                            print("\(currentPlayer.name) heals themselves")
+                            let healing = Int.random(in: 10...30)
+                            currentPlayer.health += healing
+                            print("\(currentPlayer.name) gained \(healing) health points" + "\n")
+                            print("\(currentPlayer.name) health : \(currentPlayer.health)")
+                            print("\(nextPlayer.name) health : \(nextPlayer.health)" + "\n")
+                        default:
+                            break
+                        }
+                        //Changement de tour (au tour du bot ducoup vu qu'on a commencé par le joueur)
+                        currentPlayer = Nameplayer1
+                        nextPlayer = Nameplayer2
+                        botplay()
+                    }
+                }
+            }
+        }
+        
+        
+    }
+}
