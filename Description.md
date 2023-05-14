@@ -5,17 +5,18 @@
 
 **Rooms and exits**
 
-> The Starting Room: This is where the character begins his adventure. In this room he will find his first weapon.
-> Hidden Rooms: They are accessible by solving enigmas and killing monsters. There are several Hidden Rooms across the map, they do also contain weapons, armor, health.... to help the character evolving.
-> Ending Room: If the character finally enters this room, this will stop the game and make the charactrer win. It will also only be accessible if the character solved all the enigmas and got the right keys
-> Boss Rooms: This is where the character will fight the Bosses (Big monsters), and if he manages to kill them, he wil receiv some health and experience points.
-> Enigma Rooms: This is where the enigmas take place, there are various rooms across the map, if the player manages to solve the enimgmas, he will be granted with experience points and keys.
+> The Starting Room: This is where the character begins his adventure. 
+> Hidden Rooms: They are accessible by solving enigmas and killing monsters. There are several Hidden Rooms across the map, they do also contain weapons, health.... to help the character evolving.
+> Ending Room: If the character finally enters this room, this will stop the game and make the charactrer win.
+> Boss Rooms: This is where the character will fight the Bosses (Big monsters), and if he manages to kill them he win experience points and win the acces to the room
+> Enigma(Mini Games) Rooms: This is where the enigmas take place, there are various rooms across the map, if the player manages to solve the enimgmas, he will be granted with experience points and he get acces to weapons and heals.
+> There is also one hidden room in which which shortens the way to the exit(Easter Egg)
 
 **Point system**
 
 > The experience points can be obtained by:
     - Killing monsters
-    - Solving enigmas/quests
+    - Wining minigames
 
 
 **Context and basic narrative of the adventure game :**
@@ -34,28 +35,29 @@
 
 **Characters**
 
-> Main character
-> Malfunctioning Entity Groups
-> Arcade Master: this is the final Boss of the game
+> The player can choose between to characters : The Scientist or the Guardian
+> Mobs that are dispached on the map 
+> Bosses who are waiting at the entre of each room
 
 
 
 
 **Collectibles**
 
-> Heart (Heal) ; 
-> Coins (Points)
+> Bandages (Heal)
+> Medikits (Heal) 
+> Experience points after killing or wining a minigame
 > Different weapons
-> Keys to open the different doors
+
 
 
 **Interactions and their effects/consequences**
 
 > Collisions between the character and the walls, so the character doesnt go out of the map
-> A door system for every room (opening when entering the room and closing when the character is in the room)
+> A door system for every room (opening when entering the room )
 > Moving forward, backward, left, right
-> Collecting hearts to gain health and be able to fight entities safely
-> Collecting exp points to end the game with the most points and increase your health and attack stats
+> Collecting bandages and medikits to gain health and be able to fight entities safely
+> Collecting exp points to end the game with the most points 
 > Fighting against monsters, to get exp and moving in the game
 
 
@@ -64,10 +66,10 @@
 
 > Mini battles with monsters, when we get close to the monsters, they start attacking us and they do follow us
 > TicTacToe
-> Run with a ball that u need to put in a hole
+> Guess the number
+> Wordle
 > Turn-based combat
-> We can see the enemy's lifebar and attack damage
+> We can see the enemy's life and attack damage that he give us
 > each round we have the choice to either heal or attack
-
 
 
