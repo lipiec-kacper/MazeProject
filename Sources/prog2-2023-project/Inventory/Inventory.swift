@@ -1,8 +1,7 @@
 import Foundation
 
 class Inventory{
-    //Size of inventory
-    var inventory = [[],[]]
+    var inventory = [[],[]]     //inventory array
     let weapon = Weapons()
     let heals = Heal()
     
@@ -23,13 +22,18 @@ class Inventory{
     }
     
     
-    func addWeapon(Weapons : WeaponsAvalaible){ // modify the name of the enum class weaponss
-        inventory[0].append(weapon.weaponName(weaponType: Weapons))
+    func addWeapon(Weapons : WeaponsAvalaible){ 
+        self.inventory[0].append(weapon.weaponName(weaponType: Weapons))
     }
     
     
     func addHeal(heal : HealAvalaible){
-        inventory[1].append(heals.healName(healType: heal))
+        self.inventory[1].append(heals.healName(healType: heal))
+    }
+    
+    
+    func removeHeal(choice : Int){
+        inventory[1].remove(at: choice)
     }
     
 

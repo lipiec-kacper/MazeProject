@@ -1,19 +1,20 @@
 import Foundation
 
-    enum WeaponsAvalaible{ //find another name class
+    enum WeaponsAvalaible{      //Diffrent weapons avalaible
         
     case AK47
     case RPG
     case KNIFE
     case GLOCK
     case FIST
+    case SWORD
     
 }
 
 class Weapons{
     
     
-func weaponName(weaponType : WeaponsAvalaible) -> String { // do not forget to change the class name
+func weaponName(weaponType : WeaponsAvalaible) -> String {  //Weapons name function
     var name = ""
     
     if weaponType == .AK47{
@@ -39,11 +40,15 @@ func weaponName(weaponType : WeaponsAvalaible) -> String { // do not forget to c
         name = "Fist"
     }
     
+    if weaponType == .SWORD{
+        name = "Sword"
+    }
+    
     return name
 }
     
     
-func weaponDamage(weaponType : String) -> Int{ // do not forget to change the class name
+func weaponDamage(weaponType : String) -> Int{  //Damage of weapon function
     var damage = 0
         
     if weaponType == "AK47"{
@@ -66,39 +71,14 @@ func weaponDamage(weaponType : String) -> Int{ // do not forget to change the cl
     }
     
     if weaponType == "Fist"{
-        damage = 5
+        damage = 15
+    }
+    
+    if weaponType == "Sword"{
+        damage = 25
     }
         
     return damage
     }
     
-    
-func weaponMunition(weaponType : String) -> Int { // do not forget to change the class name
-    var munition = 0
-            
-    if weaponType == "AK47"{
-        munition = 30
-    }
-            
-            
-    if weaponType == "Glock"{
-        munition = 9
-    }
-            
-            
-    if weaponType == "Knife"{
-        munition = 20
-    }
-            
-            
-    if weaponType == "RPG"{
-        munition = 1
-    }
-    
-    if weaponType == "Fist"{
-        munition = 100
-    }
-            
-    return munition
-    }
 }

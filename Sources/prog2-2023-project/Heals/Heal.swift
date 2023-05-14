@@ -1,6 +1,6 @@
 import Foundation
 
-enum HealAvalaible{ //find another name class
+enum HealAvalaible{ //Diffrent heals avalaible
     
     case BANDAGES
     case MEDIKIT
@@ -8,7 +8,7 @@ enum HealAvalaible{ //find another name class
 }
 
 class Heal{
-    func healName(healType : HealAvalaible) -> String{
+    func healName(healType : HealAvalaible) -> String{      //HealName
         var name = ""
         
         if healType == .BANDAGES{
@@ -21,7 +21,7 @@ class Heal{
         return name
     }
     
-    func healingPoint(healname : String) -> Int{
+    func healingPoint(healname : String) -> Int{        //Healing points
         var healingPoints = 0
         
         if healname == "Bandages"{

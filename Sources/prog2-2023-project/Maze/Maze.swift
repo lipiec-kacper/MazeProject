@@ -12,52 +12,52 @@ class Maze {
         self.x = x
         self.y = y
     }
-    
+    //Maze array
     var mazeArray = [
 "+-  ----------------------------------------------------------------------------+",
-"|           |                 H    H        b           |           |           |",
+"|           |     H    h      H    H        b         b |H          |H          |",
 "|           +---------------+               +-------+   |   +---+   +-------+   |",
-"|                           |   h           |       |   |   |   |   |       |   |",
-"|                           +-------+       +---+   +   |   | H |   +   +   +   |",
+"|                           |   h           |   H   |   |   |   |   |       |   |",
+"|                           +-------+  b    +---+ b +   |   | H |   +   +   +   |",
 "|                           B       |           |       |   |   |       |   b   |",
 "|-------------------------------+   +-------+   |   +---+   |   +-----------+   |",
-"|A                              |   b           |   |       |       |           |",
+"|A          H                   |   b          h|   |       |       |           |",
 "|    H                      +   +---------------|   +---+   |---+   |   +-------|",
-"|                           |                   |         b |       |           |",
+"|                           |                   |         b |    b  |          H|",
 "|                           +---------------+   +-----------+   +---|    b      |",
-"|                          B#       |       |           |           |           |",
+"|                    H     B#       |    b  |           |           |           |",
 "|                   +-----------+   |   +   +-------+   +-------+   +-------+   |",
-"|                   |           |   |   |           |           |       |       |",
+"|                   |H         h|   |   |           |        b  |       |h      |",
 "|                   |   +---+   |   |   +---+   +-----------+   +   +   |   +---|",
-"|               H   |       |   |   |       |       |   b   |       |   |       |",
+"|         H     H   |      H|   |   |       |       |   b   |       |   |       |",
 "|   +-----------------------+   |   +-------|   +   +   +   +-------|   |---+   |",
-"|           |        b          |   b       |   |       |           |   |       |",
+"|           |H       b          |   b       |   |       |           |   |H      |",
 "|-------+   |---+   +---------------+   +   +-------+   |-------+   +   |       |",
-"|   |       |       |              h|   |           |   |     b |       |       |",
+"| H |       |       | H            h|   |           |   |     b |       | b     |",
 "|   +   +---+   +   |               +---|   +---+   |   |   +   +-------|       |",
-"|   B           |   |                   |      H|   |   |   |       |   |       |",
-"|   +-------------------+               +-------+   |   +   |---+   +   +---+   |",
+"|   B           |   |                   |      H|   |   |   |       |   |h      |",
+"|   +-------------------+      b        +-------+   |   +   |---+   +   +---+   |",
 "|      H|               #                b          |       |               |   |",
 "|   +---+           +   +---------------------------------------------------+   |",
-"|___+   #B          | H |                      b    |       |           | b     |",
+"|___+   #B          | H |h                     b   H|      H|          H| b     |",
 "|       +   +-----------|   +-------------------+   +   +   |   +---+   |   +---|",
-"|      h|   |           |   |  A               H|       |   |   |   |   |   | H |",
+"|      h|   |H         H|   |  A               H|      h|   |   | H |   |   | H |",
 "| b +---+   |   +---+   +   +-------+           +-------+   |   |   |   |   |   |",
-"|   |A      |       |     b |       |          B#   |       |   |   |   |   |   |",
+"|   |A      |      h|     b |       |          B#   |H      |   |   |   |   |   |",
 "|   +-----------+   |-------+   +   +-----------+   |   |   |   |   |   +   |   |",
-"|         b         |    b      |           |       |   |   |   |   |       |   |",
+"|         b        H|    b      |           |       |   |   |   |   |       |   |",
 "|   +-----------------------+   +-------+   |   +   |   +---|   +   +-------+   |",
-"|       |h  |                   |     A |   |   |   |  b    |           |       |",
-"|       |   +   +   +-----------|   +---+   |   |   |---+   +-------+   |---+   |",
-"|       |       |               |   |       |   | b | h |               |       |",
+"|    h  |h  |                   |H    A |   |   |   |  b   H|          h| H     |",
+"|       |   +   +   +-----------|   +---+   |  h|   |---+   +-------+   |---+   |",
+"|     H |H    H |               |   |       |   | b | h |h             H|       |",
 "|   +---------------+   +---+   |   |   +---+   |   |   +---------------+       |",
-"|   |               |       |   |   |    b      |   |     b    b    |           |",
-"|   +     b         +-------+   |   +-----------+   +-------+   +   +           |",
-"|                               |H   B          #    @          |               |",
+"|   |H     H       H|       |   |   |    b  H  H|   | H        b    |           |",
+"|   +     b         +-------+   |   +-----------+   +-------+   +   +    @      |",
+"|                               |H   B          #               |              h|",
 "+-------------------------------------------------------------------------------+",
 ]
 
-    func find(character: String){
+    func find(character: String){       //Used to get the coordonates of diffrent characters needed
     for (rowIndex, row) in mazeArray.enumerated() {
         for (colIndex, col) in row.enumerated() {
             if String(col) == character {
@@ -68,7 +68,7 @@ class Maze {
     }
     
     
-    func showCharacter(axis: (Int, Int)) -> String{
+    func showCharacter(axis: (Int, Int)) -> String{     //shows the character at special coordonates
         let (xPosition, yPosition) = axis
         let row = mazeArray[yPosition]
         let index = row.index(row.startIndex, offsetBy: xPosition)
@@ -77,7 +77,7 @@ class Maze {
     }
     
     
-    func remplaceCharacter(axis: (Int, Int, String)){
+    func remplaceCharacter(axis: (Int, Int, String)){   //Remplace character in the maze function
         let (x, y, character) = axis
         var row = mazeArray[y]
         let index = row.index(row.startIndex, offsetBy: x)
@@ -86,14 +86,14 @@ class Maze {
     }
         
     
-    func showMaze(){
+    func showMaze(){            //Printing of the map
         for line in mazeArray{
             print(line)
         }
     }
     
     
-    func playerPosition() -> (Int, Int){
+    func playerPosition() -> (Int, Int){        //Player position function
         for (rowIndex, row) in mazeArray.enumerated() {
             for (colIndex, col) in row.enumerated() {
                 if col == "@" {
@@ -121,7 +121,7 @@ class Maze {
     }
     
     
-    func newPlayerPosition(to newPosition:(Int, Int)) {
+    func newPlayerPosition(to newPosition:(Int, Int)) {     //Player position after a movement
         let (newx, newy) = newPosition
         x += newx
         y += newy

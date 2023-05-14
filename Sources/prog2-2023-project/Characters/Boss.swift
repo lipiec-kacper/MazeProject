@@ -1,13 +1,18 @@
 import Foundation
     
-enum BossType {
-    case Slime  //60hp 8d
-    case RatKing    //80hp  12d
-    case ChainChomper //50hp    10d
-    case LivingShadow   // 80hp 15d
-    case WanderingEye   //40hp  5d
-    case HypnoticSpecter    //150hp Boss 1  20d
-    case GelatinousCube //400hp BossFinal 40d
+enum BossType { //Diffrent not very strong bosses
+    case Slime
+    case RatKing
+    case ChainChomper
+    case LivingShadow
+    case WanderingEye
+    
+    //Diffrent strong Bosses
+    case HypnoticSpecter
+    case GelatinousCube
+    case MargittheFellOmen
+    case RedWolfofRadagon
+    case RennalaQueenoftheFullMoon
 }
 class Boss{
     
@@ -19,7 +24,7 @@ class Boss{
     
     
     
-    func bossName(bossType : BossType) -> String { // do not forget to change the class name
+    func bossName(bossType : BossType) -> String { //Bosses names
         var name = ""
         
                 
@@ -57,12 +62,27 @@ class Boss{
             name = "Gelatinous Cube"
         }
         
+        
+        if bossType == .MargittheFellOmen{
+            name = "Margit the Fell Omen"
+        }
+        
+        
+        if bossType == .RedWolfofRadagon{
+            name = "Red Wolf of Radagon"
+        }
+        
+        
+        if bossType == .RennalaQueenoftheFullMoon{
+            name = "Rennala Queen of the Full Moon"
+        }
+        
         return name
         }
     
     
     
-    func bossHealth(bossType : BossType) -> Int { // do not forget to change the class name
+    func bossHealth(bossType : BossType) -> Int { // Bosses health points
         var health = 0
         
                 
@@ -92,19 +112,35 @@ class Boss{
         
         
         if bossType == .HypnoticSpecter{
-            health = 120
+            health = 150
         }
         
         
         if bossType == .GelatinousCube{
-            health = 140
+            health = 400
         }
+        
+        
+        if bossType == .MargittheFellOmen{
+            health = 300
+        }
+        
+        
+        if bossType == .RedWolfofRadagon{
+            health = 800
+        }
+        
+        
+        if bossType == .RennalaQueenoftheFullMoon{
+            health = 500
+        }
+        
         
         return health
         }
     
     
-    func bossDamage(bossType : BossType) -> Int { // do not forget to change the class name
+    func bossDamage(bossType : BossType) -> Int { // Bosses attack damages
         var damage = 0
         
                 
@@ -139,7 +175,22 @@ class Boss{
         
         
         if bossType == .GelatinousCube{
-            damage = 40
+            damage = 22
+        }
+        
+        
+        if bossType == .MargittheFellOmen{
+            damage = 25
+        }
+        
+        
+        if bossType == .RedWolfofRadagon{
+            damage = 41
+        }
+        
+        
+        if bossType == .RennalaQueenoftheFullMoon{
+            damage = 33
         }
         
         return damage
